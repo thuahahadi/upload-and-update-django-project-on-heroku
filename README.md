@@ -25,14 +25,27 @@ django_heroku.settings(locals())
 # Add this in settings.py-->
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+** PS: if Heroku isn't recognized as a command, please close your terminal and editor and then re-open it.
+
+DEBUG = False in settings.py
+
+ALLOWED_HOSTS = ['your_app_name.herokuapp.com', 'localhost', '127.0.0.1'] in settings.py
+
 <!-- New project upload command -->
 $ git init
+
 $ git add .
+
 $ git commit -m "first commit"
+
 $ heroku login
+
 $ heroku create app_name
+
 $ heroku config:set DISABLE_COLLECTSTATIC=1
+
 $ git push heroku master
+
 $ heroku run python manage.py migrate
 
 <!-- Create super user -->
@@ -40,9 +53,13 @@ $ heroku run:detached python manage.py createsuperuser
 
 <!-- Project Update -->
 $ heroku login
+
 $ heroku git:remote -a app_name
+
 $ git add .
+
 $ git commit -am "make it better"
+
 $ git push heroku master
 
 <!-- Model Migrate -->
