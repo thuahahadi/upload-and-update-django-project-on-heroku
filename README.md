@@ -31,7 +31,7 @@ DEBUG = False in settings.py
 
 ALLOWED_HOSTS = ['your_app_name.herokuapp.com', 'localhost', '127.0.0.1'] in settings.py
 
-<!-- New project upload command -->
+# New project upload command -->
 $ git init
 
 $ git add .
@@ -48,10 +48,10 @@ $ git push heroku master
 
 $ heroku run python manage.py migrate
 
-<!-- Create super user -->
+# Create super user -->
 $ heroku run:detached python manage.py createsuperuser
 
-<!-- Project Update -->
+# Project Update -->
 $ heroku login
 
 $ heroku git:remote -a app_name
@@ -62,5 +62,5 @@ $ git commit -am "make it better"
 
 $ git push heroku master
 
-<!-- Model Migrate -->
+# Model Migrate -->
 heroku run python manage.py migrate
