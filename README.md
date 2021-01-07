@@ -8,60 +8,59 @@ First, and most importantly, Heroku web applications require a Procfile.
 # This file is used to explicitly declare your application’s process types and entry points. It is located in the root of your repository.
 
 Procfile.py --->
-web: gunicorn myproject.wsgi
+<code>web: gunicorn myproject.wsgi</code>
 
-$ pip install gunicorn
-$ pip install django-heroku
+<code>$ pip install gunicorn</code>
+<code>$ pip install django-heroku</code>
 
-$ pip freeze > requirements.txt
+<code>$ pip freeze > requirements.txt</code>
 
 # Add the following import statement to the top of settings.py:
-import django_heroku
+<code>import django_heroku</code>
 
 # Then add the following to the bottom of settings.py:
 # Activate Django-Heroku.
-django_heroku.settings(locals())
+<code>django_heroku.settings(locals())</code>
 
 # Add this in settings.py-->
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+<code>STATIC_ROOT = os.path.join(BASE_DIR, 'static')</code>
 
 ** PS: if Heroku isn't recognized as a command, please close your terminal and editor and then re-open it.
 
-DEBUG = False in settings.py
+<code>DEBUG = False in settings.py</code>
 
-ALLOWED_HOSTS = ['your_app_name.herokuapp.com', 'localhost', '127.0.0.1'] in settings.py
+<code>ALLOWED_HOSTS = ['your_app_name.herokuapp.com', 'localhost', '127.0.0.1'] in settings.py</code>
 
 # New project upload command -->
-<code>
-$ git init
+<code>$ git init</code>
 
-$ git add .
+<code>$ git add .</code>
 
-$ git commit -m "first commit"
+<code>$ git commit -m "first commit"</code>
 
-$ heroku login
+<code>$ heroku login</code>
 
-$ heroku create app_name
+<code>$ heroku create app_name</code>
 
-$ heroku config:set DISABLE_COLLECTSTATIC=1
+<code>$ heroku config:set DISABLE_COLLECTSTATIC=1</code>
 
-$ git push heroku master
+<code>$ git push heroku master</code>
 
-$ heroku run python manage.py migrate
-</code>
+<code>$ heroku run python manage.py migrate</code>
+
 # Create super user -->
-$ heroku run:detached python manage.py createsuperuser
+<code>$ heroku run:detached python manage.py createsuperuser</code>
 
 # Project Update -->
-$ heroku login
+<code>$ heroku login</code>
 
-$ heroku git:remote -a app_name
+<code>$ heroku git:remote -a app_name</code>
 
-$ git add .
+<code>$ git add .</code>
 
-$ git commit -am "make it better"
+<code>$ git commit -am "make it better"</code>
 
-$ git push heroku master
+<code>$ git push heroku master</code>
 
 # Model Migrate -->
-heroku run python manage.py migrate
+<code>heroku run python manage.py migrate</code>
