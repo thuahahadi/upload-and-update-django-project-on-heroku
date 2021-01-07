@@ -32,6 +32,7 @@ DEBUG = False in settings.py
 ALLOWED_HOSTS = ['your_app_name.herokuapp.com', 'localhost', '127.0.0.1'] in settings.py
 
 # New project upload command -->
+<code>
 $ git init
 
 $ git add .
@@ -47,7 +48,7 @@ $ heroku config:set DISABLE_COLLECTSTATIC=1
 $ git push heroku master
 
 $ heroku run python manage.py migrate
-
+</code>
 # Create super user -->
 $ heroku run:detached python manage.py createsuperuser
 
