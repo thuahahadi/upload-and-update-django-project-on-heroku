@@ -9,10 +9,11 @@ First, and most importantly, Heroku web applications require a Procfile.
 
 Procfile.py --->
 ```python
-web: gunicorn myproject.wsgi</code>
+web: gunicorn myproject.wsgi
 ```
 
 <code>$ pip install gunicorn</code>
+
 <code>$ pip install django-heroku</code>
 
 <code>$ pip freeze > requirements.txt</code>
