@@ -8,12 +8,14 @@ First, and most importantly, Heroku web applications require a Procfile.
 # This file is used to explicitly declare your application’s process types and entry points. It is located in the root of your repository.
 
 Procfile.py --->
-<code>web: gunicorn myproject.wsgi</code>
+```python
+web: gunicorn myproject.wsgi</code>
 
-<code>$ pip install gunicorn</code>
-<code>$ pip install django-heroku</code>
+$ pip install gunicorn</code>
+$ pip install django-heroku</code>
 
-<code>$ pip freeze > requirements.txt</code>
+$ pip freeze > requirements.txt</code>
+```
 
 # Add the following import statement to the top of settings.py:
 <code>import django_heroku</code>
