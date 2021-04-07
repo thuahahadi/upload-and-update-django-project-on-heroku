@@ -38,7 +38,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 DEBUG = False # in settings.py
 
-ALLOWED_HOSTS = ['your_app_name.herokuapp.com', 'localhost', '127.0.0.1'] in settings.py
+ALLOWED_HOSTS = ['your_app_name.herokuapp.com', 'localhost', '127.0.0.1'] # in settings.py
 ```
 
 # New project upload command -->
