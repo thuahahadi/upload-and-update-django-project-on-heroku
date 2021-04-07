@@ -10,28 +10,35 @@ First, and most importantly, Heroku web applications require a Procfile.
 Procfile.py --->
 ```python
 web: gunicorn myproject.wsgi</code>
-
-$ pip install gunicorn</code>
-$ pip install django-heroku</code>
-
-$ pip freeze > requirements.txt</code>
 ```
 
+<code>$ pip install gunicorn</code>
+<code>$ pip install django-heroku</code>
+
+<code>$ pip freeze > requirements.txt</code>
+
+
 # Add the following import statement to the top of settings.py:
-<code>import django_heroku</code>
+```python
+import django_heroku
+```
 
 # Then add the following to the bottom of settings.py:
+```python
 # Activate Django-Heroku.
-<code>django_heroku.settings(locals())</code>
+django_heroku.settings(locals())
+```
 
 # Add this in settings.py-->
-<code>STATIC_ROOT = os.path.join(BASE_DIR, 'static')</code>
+```python
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 ** PS: if Heroku isn't recognized as a command, please close your terminal and editor and then re-open it.
 
-<code>DEBUG = False in settings.py</code>
+DEBUG = False # in settings.py
 
-<code>ALLOWED_HOSTS = ['your_app_name.herokuapp.com', 'localhost', '127.0.0.1'] in settings.py</code>
+ALLOWED_HOSTS = ['your_app_name.herokuapp.com', 'localhost', '127.0.0.1'] in settings.py
+```
 
 # New project upload command -->
 <code>$ git init</code>
